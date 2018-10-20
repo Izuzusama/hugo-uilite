@@ -1,9 +1,9 @@
-{{ $experience := .Site.Data.experience }}
+{{ $educations := .Site.Data.educations }}
 
-<section id="experience" class="experience">
-  <h2 class="heading">{{ $experience.title }}</h2>
+<section id="educations" class="education">
+  <h2 class="heading">{{ $educations.title }}</h2>
   <div id="timeline">
-    {{ range $index, $element := $experience.experience }}
+    {{ range $index, $element := $educations.educations }}
     <div class="timeline-item clearfix">
       <div class="timeline-icon"></div>
 

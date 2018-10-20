@@ -1,55 +1,57 @@
 /*
-*=================================
-* Hugo UILite Portfolio v0.8
-*=================================
-*
-* Free version https://uicard.io/products/hugo-uilite
-* Pro version https://uicard.io/products/hugo-uilite-pro
-* Demo https://demo.uicard.io/hugo-uilite-portfolio-demo/
-*
-* Coded By UICardio
-*
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-*
-*/
+ *=================================
+ * Hugo UILite Portfolio v0.8
+ *=================================
+ *
+ * Free version https://uicard.io/products/hugo-uilite
+ * Pro version https://uicard.io/products/hugo-uilite-pro
+ * Demo https://demo.uicard.io/hugo-uilite-portfolio-demo/
+ *
+ * Coded By UICardio
+ *
+ * The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+ *
+ */
 
 
 let menuBtn = $("#menuBar");
 
-menuBtn.click(function(){
+menuBtn.click(function () {
 
   $('.hamburger-menu').toggleClass('animate');
 
-  if($(".secondaryMenu").hasClass("active")){
-    
-    $(".secondaryMenu").removeClass("active");
-    setTimeout(function(){
-      $(".primaryMenu").addClass("active");
-    },400);
+  if ($(".secondaryMenu").hasClass("active")) {
 
-    
+    $(".secondaryMenu").removeClass("active");
+    setTimeout(function () {
+      $(".primaryMenu").addClass("active");
+    }, 400);
+
+
   } else {
     $(".primaryMenu").removeClass("active");
-  
-    setTimeout(function(){
+
+    setTimeout(function () {
       $(".secondaryMenu").addClass("active");
-    },350);
+    }, 350);
   }
 });
 
-$(document).ready(function(){
+$(document).ready(function () {
   var elements = $(".sidebar > .main-info *");
+  var mainInfoEle = $(".main-info");
+  // console.log(elements);
 
-  console.log(elements);
-
-  for(let i = 0; i < elements.length; i++){
-    setTimeout(function(){
+  for (let i = 0; i < elements.length; i++) {
+    setTimeout(function () {
       $(elements[i].tagName).addClass("bs");
-    }, (400 * i) - 90 * i );
+    }, 400);
   }
-
-  setTimeout(function(){
+  setTimeout(function () {
+    $(mainInfoEle.tagName).addClass("bs");
+  }, 400);
+  setTimeout(function () {
     $(".main-content").addClass("active");
-  }, 1900);
+  }, 350);
 
 });
