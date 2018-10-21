@@ -13,4 +13,12 @@
     </div>
   </div>
   {{ end }}
+  {{ if $skills.buzzword }}
+  <div>
+    <h2 class="heading">Buzzword</h2>
+    {{ range $value := $skills.buzzword }}
+    <div>{{$value}}</div>
+    {{end}}
+  </div>
+  {{end}}
 </section>
