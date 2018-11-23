@@ -2,9 +2,9 @@
 {{ $social := .Site.Data.social }}
 <section id="sidebar" class="sidebar d-flex align-items-center p-5">
   <div class="main-info">
-
+    {{ if $sidebar.displayPicture }}
     <img src="{{.Site.BaseURL}}/images/{{ $sidebar.displayPicture }}" class="rounded-circle mb-3" width="160px">
-
+    {{ end }}
     <h1 class="heading">{{ $sidebar.title }} <span class="highlight">{{ $sidebar.highlightedText }}</span></h1>
     <p class="text-muted">{{ $sidebar.description }}</p>
 
