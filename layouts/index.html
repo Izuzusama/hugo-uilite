@@ -2,9 +2,11 @@
 {{ partial "sidebar.html" . }}
 
 <div class="main-content">
+  {{ if .Site.Data.config.resumeEnabled }}
   <div class="g-recaptcha" data-sitekey="{{.Site.Data.config.recapchaSiteKey}}" data-callback="onSubmit"
     data-size="invisible">
   </div>
+  {{ end }}
   {{ if .Site.Data.skills }}
   {{ if .Site.Data.skills.enabled }}
   {{ partial "skills.html" . }}
