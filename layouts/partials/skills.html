@@ -15,7 +15,7 @@
   {{ end }}
   {{ if $skills.buzzword }}
   <div>
-    <h2 class="heading">$skills.buzzword_title</h2>
+    <h2 class="heading">{{ $skills.buzzword_title }}</h2>
     {{ range $value := $skills.buzzword }}
     <div>{{$value}}</div>
     {{end}}
