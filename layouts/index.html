@@ -2,6 +2,8 @@
 {{ partial "sidebar.html" . }}
 
 <div class="main-content">
+  <div class="g-recaptcha" data-sitekey=".Site.Config.recapchaSiteKey" data-callback="onSubmit" data-size="invisible">
+  </div>
   {{ if .Site.Data.skills }}
   {{ if .Site.Data.skills.enabled }}
   {{ partial "skills.html" . }}
@@ -29,8 +31,10 @@
   {{ if gt (len (where .Data.Pages "Type" "work")) 0 }}{{ partial "work.html" . }}{{ end }}
 </div>
 
+{{ if .Site.Data.config.contactEnabled }}
 <div class="main-content">
   {{ partial "contact.html" . }}
 </div>
+{{ end }}
 
 {{ partial "footer-scripts.html" . }}

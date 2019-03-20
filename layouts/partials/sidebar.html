@@ -1,5 +1,6 @@
 {{ $sidebar := .Site.Data.sidebar }}
 {{ $social := .Site.Data.social }}
+{{ $config := .Site.Data.config }}
 <section id="sidebar" class="sidebar d-flex align-items-center p-5">
   <div class="main-info">
     {{ if $sidebar.displayPicture }}
@@ -17,9 +18,13 @@
       {{ end }}
 
     </div>
+    {{ if $config.resumeEnabled }}
+    <button onclick="grecaptcha.execute();" class="btn btn-primary btn-lg">Download Resume</button>
+    {{ end }}
 
+    {{ if $config.contactEnabled }}
     <a href="#contact" class="btn btn-dark btn-lg">Contact</a>
-
+    {{ end }}
 
   </div>
 </section>
