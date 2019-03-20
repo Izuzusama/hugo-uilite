@@ -19,7 +19,8 @@
 
     </div>
     {{ if $config.resumeEnabled }}
-    <button onclick="grecaptcha.execute();" class="btn btn-primary btn-lg">Download Resume</button>
+    <button onclick="grecaptcha.execute();" class="btn btn-primary btn-lg"><i class="fas fa-file-download bs"></i>
+      Resume</button>
     {{ end }}
 
     {{ if $config.contactEnabled }}
